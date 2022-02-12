@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   nameInput: string = '';
   dateInput: string = '';
+  amountInput: string = '';
 
   onNameChange(value: string) {
     this.nameInput = value;
   }
   onDateChange(value: string) {
     this.dateInput = value;
+  }
+  onAmountChange(value: string) {
+    this.amountInput = value;
   }
 }

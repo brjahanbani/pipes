@@ -3,18 +3,20 @@
   <div class="row">
     <div class="form-group col">
       <label>Receiver Name &nbsp;</label><br>
-      <input type="text" (input)="onNameChange($any($event.target).value)">
+      <input type="text" class="form-control" (input)="onNameChange($any($event.target).value)">
     </div>
     <div class="col">
       <label>Correct Name:</label><br>
       {{nameInput | titlecase}}
     </div>
   </div>
+
   <br />
+
   <div class="row">
     <div class="form-group col">
       <label>Payment date &nbsp;</label><br>
-      <input type="date" (input)="onDateChange($any($event.target).value)">
+      <input type="date" class="form-control" (input)="onDateChange($any($event.target).value)">
     </div>
     <div class="col">
       <label>Correct Date:</label><br>
@@ -23,9 +25,27 @@
       {{dateInput | date:'shortTime'}} <br>
       {{dateInput | date:'mm:ss'}} <br>
       {{dateInput | date:'full'}} <br>
-
     </div>
   </div>
+
+  <br />
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Amount &nbsp;</label><br>
+      <input type="number" class="form-control" (input)="onAmountChange($any($event.target).value)">
+    </div>
+    <div class="col">
+      <label>Correct Amount:</label><br>
+      {{amountInput | currency}} <br>
+      {{amountInput | currency:'CAD'}} <br>
+      {{amountInput | currency:'CAD':'symbol':'4.2-2'}} <br>
+      {{amountInput | currency:'IR':'symbol-narrow':'5.1-2'}} <br>
+      {{amountInput | currency:'JPY'}} <br>
+      {{amountInput | currency:'CLP'}} <br>
+    </div>
+  </div>
+
 
 
 </div>
